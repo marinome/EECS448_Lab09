@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded",() =>{
         let bacQ = document.getElementById('bacon');
         let letQ = document.getElementById('lettuce');
         let tomQ = document.getElementById('tomato');
-        let email = document.getElementById('username');
+        let email = document.getElementById('email');
         let password = document.getElementById('password');
         let free = document.getElementById('free');
         let d50 = document.getElementById('d50');
@@ -29,15 +29,16 @@ document.addEventListener("DOMContentLoaded",() =>{
     });
 
     function atdotcom(email){
-        let result = false;
-        for (let i = 0; i < email.length; i++){ //if broke, change to ++i
-            //console.log(email[i]);
-            //console.log("length: " + email.length);
-            if (email[i] == "@" && i != 0 && i != email.length-1){
-                //console.log("when true:" + i);
-                result = true;
+        let at = false;
+        let dot = false;
+        for (let i = 0; i < email.length; i++){
+            if(email[i]=="@" && i!=0){
+                at = true;
+            }
+            if(at==true && email[i] == "." && email[i-1]!="@" && i+1 != email.length){
+                dot = true;
             }
         }
-        return result;
+        return dot;
     }
 });
