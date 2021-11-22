@@ -1,0 +1,21 @@
+body{
+    font-family:Comic Sans MS;
+    padding: 50px;
+    background-color:#d8c4aa;
+}
+
+header{
+    text-align: center;
+    color:green;
+}
+
+h1{
+    color:brown;
+}
+form{
+    text-align:center;
+}
+input{
+    font-family:Comic Sans MS;
+    color:red;
+}

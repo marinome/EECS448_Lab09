@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Store</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>BLTs Only</h1>
+            <p>Welcome to 'BLTs Only', where we literally only sell bacon, lettuce, and tomatoes (bread not included). Buy any amount of any item, although we recommend buying all three in equal amounts for the perfect BLT!</p>
+        </header>
+            <form action="customerBackend.php" method="post">
+                <b>Inventory:</b><br>
+                    Bacon, $7.32 per lb<br>
+                    Quantity: <input type="number" id="bacon" name="bacon" min="0"><br><br>
+
+                    Lettuce, $3.44 per 8 leaves<br>
+                    Quantity: <input type="number" id="lettuce" name="lettuce" min="0"><br><br>
+
+                    Tomato, $1.09 per 2 tomatoes<br>
+                    Quantity: <input type="number" id="tomato" name="tomato" min="0"><br><br>
+
+                <b>Please sign-in to check out:</b><br>
+                    Email: <input type="text" name="username" id="username"><br>
+                    Password: <input type="text" name="password" id="password"><br><br>
+
+                <b>Choose your shipping option:</b><br>
+                    <input type="radio" name="ship" id="free" value="Free 7 day">Free 7-day<br>
+                    <input type="radio" name="ship" id="d50" value="$50 Over Night">$50.00 Overnight<br>
+                    <input type="radio" name="ship" id="d5" value="$5 Three Day">$5.00 3-day<br><br>
+                <input type="submit" id="submit" value="Place Order">
+                <input type="reset">
+            </form>
+        <script src="formChecker.js"></script>
+    </body>
+</html>
